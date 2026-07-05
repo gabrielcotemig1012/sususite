@@ -1,0 +1,495 @@
+*{margin:0;
+  box-sizing: border-box;}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-style: normal;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+/* ===================== CABEÇALHO / GRID PRINCIPAL ===================== */
+
+.principal {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 170px 500px 293px;
+  grid-template-areas: "cabecalho cabecalho"
+                        "secao secao"
+                        "rodape rodape";
+}
+
+header{
+  grid-area: cabecalho;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+
+section {
+  grid-area: secao;
+  background-color: rgb(255, 255, 255);
+}
+
+footer {
+  grid-area: rodape;
+  background-color: blueviolet;
+}
+
+.superior {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 40px 40px;
+  margin: 0;
+  justify-content: center;
+}
+
+ul img {
+  position: absolute;
+  left: 2%;
+  top: 20px;
+  width: 120px;
+}
+
+.img1 {
+  position: absolute;
+  left: 89%;
+  top: 55px;
+  width: 25px;
+}
+
+.img2 {
+  position: absolute;
+  left: 91%;
+  top: 55px;
+  width: 25px;
+}
+
+.img3 {
+  position: absolute;
+  left: 93%;
+  top: 55px;
+  width: 25px;
+}
+
+.procurar {
+  position: absolute;
+  left: 78%;
+  top: 62px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.carrinhotxt {
+  position: absolute;
+  left: 91.5%;
+  top: 62px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.entrar {
+  position: absolute;
+  left: 96%;
+  top: 62px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.meio {
+  width: 180vh;
+  height: 62vh;
+}
+
+/* ===================== IMAGENS DE DESTAQUE (INDEX) ===================== */
+
+.imagens {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+}
+
+.img11 {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.img22 {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.img33 {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* ===================== QUEM SOMOS ===================== */
+
+.quemsomos {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "textoquem imgquem";
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 60px 40px;
+}
+
+.textoquem {
+  grid-area: textoquem;
+  text-align: left;
+  padding: 20px 40px;
+}
+
+.textoquem h1 {
+  color: blueviolet;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.textoquem h2 {
+  color: rgb(230, 230, 230);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.textoquem h3 {
+  color: blueviolet;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.textoquem p {
+  color: rgb(200, 200, 200);
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.botaoquem {
+  background-color: blueviolet;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 15px 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.imgquem {
+  grid-area: imgquem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===================== REDES SOCIAIS ===================== */
+
+.redes {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+}
+
+.redes img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  padding: 12px;
+}
+
+/* ===================== CATEGORIAS (FEMININO / MASCULINO / CALÇADOS) ===================== */
+
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+}
+
+.categorias .cat {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+}
+
+.categorias .cat img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.categorias .cat h2 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: blueviolet;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* ===================== ENTRE EM CONTATO ===================== */
+
+.contato {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas: "faleconosco formulario";
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 60px 40px;
+}
+
+.contato h1 {
+  grid-column: 1 / -1;
+  color: blueviolet;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.contato .subtitulo {
+  grid-column: 1 / -1;
+  color: rgb(230, 230, 230);
+  margin-bottom: 30px;
+}
+
+.faleconosco {
+  grid-area: faleconosco;
+  text-align: left;
+  padding: 20px;
+}
+
+.faleconosco h2 {
+  color: blueviolet;
+  margin-bottom: 15px;
+}
+
+.faleconosco p {
+  color: rgb(200, 200, 200);
+  margin-bottom: 20px;
+}
+
+.faleconosco h3 {
+  color: blueviolet;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.formulario {
+  grid-area: formulario;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  background-color: rgb(20, 20, 20);
+  padding: 40px;
+  text-align: left;
+}
+
+.formulario label {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  background-color: rgb(40, 40, 40);
+  color: rgb(255, 255, 255);
+}
+
+.formulario button {
+  background-color: blueviolet;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 250px;
+}
+
+/* ===================== RODAPÉ CONTEÚDO ===================== */
+
+.rodapeconteudo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  color: rgb(255, 255, 255);
+  padding: 30px 40px;
+  text-align: left;
+}
+
+.rodapeconteudo h3 {
+  margin-bottom: 10px;
+}
+
+.rodapeconteudo p, .rodapeconteudo a {
+  color: rgb(230, 230, 230);
+  font-size: 13px;
+}
+
+/* ===================== PÁGINAS DE PRODUTO (MASCULINO / FEMININO / CALÇADO) ===================== */
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 60px 40px;
+  background-color: rgb(255, 255, 255);
+}
+
+.produtos .card {
+  display: grid;
+  grid-template-rows: 350px auto auto;
+  background-color: rgb(240, 240, 240);
+  text-align: left;
+}
+
+.produtos .card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.produtos .card h3 {
+  padding: 10px 15px 0 15px;
+  font-size: 15px;
+}
+
+.produtos .card p {
+  padding: 0 15px 15px 15px;
+  font-weight: bold;
+  color: blueviolet;
+}
+
+.tituloproduto {
+  background-color: rgb(0,0,0);
+  color: blueviolet;
+  padding: 30px 40px;
+  text-align: left;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+/* ===================== CARRINHO ===================== */
+
+.principalcarrinho {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  gap: 30px;
+  padding: 60px 40px;
+  background-color: rgb(255, 255, 255);
+}
+
+.seucarrinho {
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 30px;
+  align-items: start;
+  text-align: left;
+}
+
+.seucarrinho h1 {
+  grid-column: 1 / -1;
+  color: blueviolet;
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.seucarrinho img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  background-color: rgb(255, 255, 255);
+}
+
+.infoproduto h3 {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.infoproduto p {
+  color: rgb(200, 200, 200);
+  margin-bottom: 5px;
+}
+
+.infoproduto .preco {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.resumopedido {
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 30px;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: 15px;
+  align-content: start;
+  text-align: left;
+  height: fit-content;
+}
+
+.resumopedido h2 {
+  color: blueviolet;
+  font-size: 22px;
+}
+
+.linharesumo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.linharesumo span.destaque {
+  color: blueviolet;
+}
+
+.linharesumo.total {
+  font-size: 22px;
+  color: blueviolet;
+}
+
+.finalizar {
+  background-color: blueviolet;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 30px;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 100%;
+}
